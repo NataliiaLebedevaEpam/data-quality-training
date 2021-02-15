@@ -35,7 +35,7 @@ WHERE avgsal > 2000;
 
 5.	Вывести FirstName, LastName только тех сотрудников, имя менеджера которых начинается на букву M.
 ```
-SELECT E.FirstName, E.LastName FROM 'Employees' as empl 
+SELECT E.FirstName, E.LastName FROM 'Employees' as E, Managers as M
 WHERE E.ManagerID = M.ManagerID AND M.FirstName LIKE 'M%';
 ```
 
